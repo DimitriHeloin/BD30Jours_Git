@@ -32,7 +32,7 @@ public class MainActivity extends com.example.bd30jours_git.slidingMenu.app.app.
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-
+        Auteur auteur=new Auteur("AuteurTest","NomTest","PrenomTest");
 
         setContentView(R.layout.activity_main);
         setBehindContentView(R.layout.layout_menu);
@@ -95,7 +95,7 @@ public class MainActivity extends com.example.bd30jours_git.slidingMenu.app.app.
 
     public void showMenu(View view) {
         // Kabloey
-        menu.bringToFront();
+       toggle();
     }
 
 }

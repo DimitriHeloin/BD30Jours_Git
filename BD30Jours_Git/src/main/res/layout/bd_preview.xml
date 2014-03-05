@@ -54,7 +54,7 @@
                     android:text="Small Text"
                     android:textColor="#c9669c"
                     android:layout_weight="2"
-                    android:id="@+id/textView2" />
+                    android:id="@+id/auteur_unitaire" />
 
                 <TextView
                     android:layout_weight="2"
@@ -71,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="Small Text"
-                    android:id="@+id/textView4"
+                    android:id="@+id/textViewType"
                     android:layout_marginLeft="20dp" />
             </LinearLayout>
 
