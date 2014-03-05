@@ -1,6 +1,7 @@
 package com.example.bd30jours_git;
 
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.widget.SlidingPaneLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -12,20 +13,31 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 import android.view.ViewStub;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-
+import android.util.Log;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends com.example.bd30jours_git.slidingMenu.app.app.SlidingFragmentActivity {
+
+    private View menu;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+
+
         setContentView(R.layout.activity_main);
+        setBehindContentView(R.layout.layout_menu);
+
+
 
         MainFragment fragment = (MainFragment)getSupportFragmentManager().findFragmentById(R.id.fragment_list);
 
@@ -79,6 +91,11 @@ public class MainActivity extends FragmentActivity {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             return rootView;
         }
+    }
+
+    public void showMenu(View view) {
+        // Kabloey
+        menu.bringToFront();
     }
 
 }
