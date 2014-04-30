@@ -1,2 +1,3 @@
 include ':BD30Jours_Git'
 include ':lib_menu'
+include ':BD30Jours_Git:libs:universal-image-loader'

@@ -94,7 +94,7 @@ public class MainFragment extends Fragment {
             pDialog.setMessage("Getting Data ...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
-            pDialog.show();
+            //pDialog.show();
         }
         @Override
         protected JSONObject doInBackground(String... args) {
