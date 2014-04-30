@@ -1,52 +1,24 @@
 package com.example.bd30jours_git;
 
-import android.app.ProgressDialog;
-import android.content.Intent;
 import android.graphics.Point;
-import android.os.AsyncTask;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.widget.SlidingPaneLayout;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
-import android.view.ViewStub;
 import android.view.Window;
-import android.view.WindowManager;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.util.Log;
 
 import com.example.bd30jours_git.slidingMenu.app.app.SlidingMenu;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-
-public class MainActivity extends com.example.bd30jours_git.slidingMenu.app.app.SlidingFragmentActivity {
+/**
+ * Created by Dimitri on 19/03/14.
+ */
+public class FavorisActivity extends com.example.bd30jours_git.slidingMenu.app.app.SlidingFragmentActivity {
 
     private SlidingMenu menu;
 
@@ -59,7 +31,7 @@ public class MainActivity extends com.example.bd30jours_git.slidingMenu.app.app.
 
         Auteur auteur=new Auteur("AuteurTest","NomTest","PrenomTest");
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_favoris);
         setBehindContentView(R.layout.layout_menu);
 
         menu=getSlidingMenu();
@@ -67,7 +39,8 @@ public class MainActivity extends com.example.bd30jours_git.slidingMenu.app.app.
 
 
 
-        Log.e("NOMBRE DE FAVORIS"," : "+db.getFavorisCount());
+
+
         int widthMenu, widthShadow;
         Display display = getWindowManager().getDefaultDisplay();
 
@@ -87,7 +60,7 @@ public class MainActivity extends com.example.bd30jours_git.slidingMenu.app.app.
         menu.setBehindOffset(widthMenu);
 
 
-        MainFragment fragment = (MainFragment)getSupportFragmentManager().findFragmentById(R.id.fragment_list);
+        FavorisFragment fragment = (FavorisFragment)getSupportFragmentManager().findFragmentById(R.id.fragment_list_favoris);
 
 
 
@@ -96,9 +69,6 @@ public class MainActivity extends com.example.bd30jours_git.slidingMenu.app.app.
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
-     
-
-
 
 
 
@@ -110,7 +80,7 @@ public class MainActivity extends com.example.bd30jours_git.slidingMenu.app.app.
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        
+
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -138,20 +108,14 @@ public class MainActivity extends com.example.bd30jours_git.slidingMenu.app.app.
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_favoris, container, false);
             return rootView;
         }
     }
 
     public void showMenu(View view) {
         // Kabloey
-       toggle();
+        toggle();
     }
-
-
-
-
-
-
 }

@@ -226,10 +226,8 @@ public class CustomViewAbove extends ViewGroup {
 
 		final boolean dispatchSelected = mCurItem != item;
 		mCurItem = item;
-		//final int destX = getDestScrollX(mCurItem);
-        final int destX = getDestScrollX(mCurItem);
-
-        if (dispatchSelected && mOnPageChangeListener != null) {
+		final int destX = getDestScrollX(mCurItem);
+		if (dispatchSelected && mOnPageChangeListener != null) {
 			mOnPageChangeListener.onPageSelected(item);
 		}
 		if (dispatchSelected && mInternalPageChangeListener != null) {
@@ -714,8 +712,8 @@ public class CustomViewAbove extends ViewGroup {
 				mLastMotionX = x;
 				float oldScrollX = getScrollX();
 				float scrollX = oldScrollX + deltaX;
-				final float leftBound = 200;
-				final float rightBound = 200;
+				final float leftBound = getLeftBound();
+				final float rightBound = getRightBound();
 				if (scrollX < leftBound) {
 					scrollX = leftBound;
 				} else if (scrollX > rightBound) {

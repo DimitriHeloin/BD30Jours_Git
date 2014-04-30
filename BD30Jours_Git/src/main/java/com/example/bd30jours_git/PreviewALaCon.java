@@ -10,6 +10,15 @@ public class PreviewALaCon {
     public String getTitre() {
         return titre;
     }
+    public String getUrlPreview()
+    {
+        return this.urlPreview;
+    }
+
+    public String getUrlLecture()
+    {
+        return this.urlLecture;
+    }
 
     public void setTitre(String titre) {
         this.titre = titre;
@@ -34,6 +43,7 @@ public class PreviewALaCon {
     public Type getType() {
         return type;
     }
+    public int getId(){return id;};
 
     public void setType(Type type) {
         this.type = type;
@@ -43,14 +53,19 @@ public class PreviewALaCon {
     private String description;
     private Auteur auteur;
     private Type type;
-
-    public PreviewALaCon(double rate, String title, String descri, Auteur aut, Type typ)
+    private int id;
+    private String urlPreview;
+    private String urlLecture;
+    public PreviewALaCon(double rate, String title, String descri, Auteur aut, Type typ, int idd, String urlPreview, String urlLecture)
     {
         rating=rate;
         titre=title;
         description=descri;
         auteur=aut;
-        type=typ;
+        type=typ ;
+        id =idd;
+        this.urlLecture=urlLecture;
+        this.urlPreview=urlPreview;
     }
 
 

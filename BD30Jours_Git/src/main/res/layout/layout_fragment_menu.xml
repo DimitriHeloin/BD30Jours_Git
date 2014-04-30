@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/background_top">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondmenu">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:id="@+id/bouton_favoris"
+                    android:text="Favoris" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondmenu">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:id="@+id/bouton_planches"
+                    android:text="Planches" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondmenu">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:id="@+id/bouton_strip"
+                    android:text="Strip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondmenu" >
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:id="@+id/bouton_auteurs"
+                    android:text="Auteurs" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

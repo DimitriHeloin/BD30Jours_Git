@@ -3,7 +3,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".FavorisActivity"
     tools:ignore="MergeRootFrame" >
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -32,9 +32,9 @@
         </LinearLayout>
     </LinearLayout>
 
-    <fragment android:name="com.example.bd30jours_git.MainFragment"
-        android:id="@+id/fragment_list"
+    <fragment android:name="com.example.bd30jours_git.FavorisFragment"
+        android:id="@+id/fragment_list_favoris"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"/>
-    </RelativeLayout>
+</RelativeLayout>
